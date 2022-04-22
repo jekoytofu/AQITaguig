@@ -1,0 +1,266 @@
+
+.navbar-area {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.top-nav{
+  display: flex;
+  justify-content: space-between;
+  position:sticky;
+  top:0px;
+  padding:1rem;
+  z-index: 1;
+
+}
+.nav-link{
+  font-size: 22px;
+}
+.active-nav{
+  font-weight: bold;
+}
+
+.nav-item{
+  width: auto;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 10px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.r1-container{
+  max-width: 1620px;
+}
+.our_team:hover{
+  background-color: #c9c9c9 ;
+}
+
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 100px;
+  text-align: center;
+  z-index: -1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+.contact-input{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.card{
+  background-color:#f0f0f0;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  width: auto;
+}
+
+.card-br{
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  width: auto;
+}
+
+.link{
+  font-size: 14px;
+  color: #222;
+  text-decoration: none;
+}
+
+.link:hover{
+  color: blue;
+  text-decoration: underline;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #ffffff;
+  padding: 9rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  gap: 25px;
+  text-align: center;
+}
+
+.grid-item{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #38424d;
+}
+
+.grid-item-blue{
+  background-color: rgb(173 216 230);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.grid-item-green{
+  background-color: #008000;
+  padding: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.grid-item-yellow{
+  background-color: #FFFF00;
+  padding: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.grid-item-orange{
+  background-color: #ffa500;
+  padding: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.grid-item-red{
+  background-color: #ff5349;
+  padding: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.grid-item-red-orange{
+  background-color: #ff0000;
+  padding: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.grid-item-maroon{
+  background-color: #800000;
+  padding: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+/* charts */
+
+.graphBox{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  min-height: 200px;
+}
+
+.graphBox .box{
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+/* responsive design */
+@@media (max-width: 991px){
+  .graphBox{
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
