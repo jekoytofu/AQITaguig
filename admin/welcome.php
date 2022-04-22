@@ -102,9 +102,9 @@
       </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #43609C; ">
+    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #df3535; ">
       <div style="flex-basis: 50%;">
-        <a class="navbar-brand text-light" href="dashboard.php" style="font-weight:600; font-size:40px"><img width="70px" src="../assets/logooooo.png" alt="logo">&nbsp;LiFECLiCK</a>
+        <a class="navbar-brand text-light" href="dashboard.php" style="font-weight:600; font-size:40px"><img width="70px" src="../assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -113,9 +113,6 @@
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
             <li><a class="nav-link text-light" href="dashboard.php">Dashboard</a></li>
-            <li><a class="nav-link text-light" href="accounts.php">Accounts</a></li>
-            <li><a class="nav-link text-light" href="contact_us.php">Feedback</a></li>
-            <li><a class="nav-link text-light" href="patients.php">Patients</a></li>
             <li class="nav-item">
             <?php
               if(isset($_SESSION['username'])){
@@ -138,12 +135,12 @@
         </div>
       </div>
     </nav>
-    <section style="padding:2rem; height: 70vh; background-color: #f8f8f8;" class="content-center">
+    <section style="padding:2rem; height: 70vh; background-color: #ffffff;" class="content-center">
       <div class="container">
           <div class="card">
             <div class="block-weighted">
               <div class="weight-50 content-center">
-                <img src="../assets/logooooo.png" alt=""><br>
+                <img src="../assets/WBLogo.png" alt=""><br>
               </div>
               <div class="weight-50 content-center">
                 <h2>Welcome, <?php echo $_SESSION['username'] ?></h2>
@@ -152,11 +149,6 @@
             </div>
           </div>
       </div>
-      <div class="d-flex justify-content-center">
-          <button class="btn btn-light text-primary" type="button" name="button" style="border-radius:50px; background-color: #f5f5f5; font-size: 25px; "><a href="backup.php" class="text-dark" style="text-decoration: none"><i class="fa fa-database"></i> Backup</button>
-        </a>
-      </div>
     </section>
-    <?php include("../include/admin/footer.php") ?>
   </body>
 </html>

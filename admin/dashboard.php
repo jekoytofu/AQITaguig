@@ -146,9 +146,9 @@ require_once("../include/config.php"); ?>
       </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #43609C; ">
+    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #df3535; ">
       <div style="flex-basis: 50%;">
-        <a class="navbar-brand text-light" href="dashboard.php" style="font-weight:600; font-size:40px"><img width="70px" src="../assets/logooooo.png" alt="logo">&nbsp;LiFECLiCK</a>
+        <a class="navbar-brand text-light" href="dashboard.php" style="font-weight:600; font-size:40px"><img width="70px" src="../assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -157,9 +157,6 @@ require_once("../include/config.php"); ?>
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
             <li><a class="nav-link active-nav text-light" href="dashboard.php">Dashboard</a></li>
-            <li><a class="nav-link text-light" href="accounts.php">Accounts</a></li>
-            <li><a class="nav-link text-light" href="contact_us.php">Feedback</a></li>
-            <li><a class="nav-link text-light" href="patients.php">Patients</a></li>
             <li class="nav-item">
             <?php
               if(isset($_SESSION['username'])){
@@ -182,19 +179,16 @@ require_once("../include/config.php"); ?>
         </div>
       </div>
     </nav>
-    <section style="padding:2rem; min-height: 70vh; background-color: #f8f8f8;" class="content-center">
+    <section style="padding:2rem; min-height: 70vh; background-color: #FFFFFF;" class="content-center">
       <div class="container">
           <div class="card">
             <!-- disoplay here chart -->
-						<div id="donutchart" style="width: 100%; height: 400px;"></div>
           </div>
 					<br>
 					<div class="card">
-						<div id="piechart_3d" style="width: 100%; height: 400px;"></div>
 					</div>
 					</div>
       </div>
     </section>
-    <?php include("../include/admin/footer.php") ?>
   </body>
 </html>
