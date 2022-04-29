@@ -118,7 +118,7 @@
     </style>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #df3535;">
+      <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #ed6b6d;">
         <div style="flex-basis: 50%;">
           <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
         </div>
@@ -166,8 +166,8 @@
     <section>
       <img src="assets/Barangay.jpg" alt="homepage" style="width:100%;">
     </section>
-    <section style="padding:5rem;">
-      <div class="block-weighted">
+    <section style="padding:2rem; padding-left:3rem; padding-right:3rem;" class="container">
+      <div class="block-weighted" style="padding: 2rem; padding-bottom: 0%">
         <div class="weight-50 dual-content-left" "col-lg-6">
           <div class="card-br">
           <h1 class="title h1 font-weight-bold">Welcome to Brgy. Western Bicutan Air Quality Monitor</h1>
@@ -177,14 +177,14 @@
           </p>
         </div>
       </div>
-        <div class="weight-50 content-center">
-          <img src="assets/measure.png" alt="" height="100%">
+        <div class="weight-60 content-center">
+          <img src="assets/measure.png" alt="" height="370px" weight="100%">
         </div>
       </div>
 
       <br>
-
-            <div class="card">
+            <section class="container" style="display: flex;  justify-content: center;">
+            <div class="card-AQI">
               <div class="grid-container">
               <div class="grid-item"><b>BWB AQI Level</b></div>
               <div class="grid-item"><b>Colors</b></div>
@@ -220,6 +220,7 @@
                             health effects. Should avoid outdoor activities.</div>
                           </div>
             </div>
+            </section>
 
     </section>
     <?php include("include/design.php") ?>
