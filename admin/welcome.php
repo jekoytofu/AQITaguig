@@ -102,7 +102,7 @@
       </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #ed6b6d; ">
+    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #df3535; ">
       <div style="flex-basis: 50%;">
         <a class="navbar-brand text-light" href="dashboard.php" style="font-weight:600; font-size:40px"><img width="70px" src="../assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
       </div>
@@ -113,7 +113,24 @@
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
             <li><a class="nav-link text-light" href="dashboard.php">Dashboard</a></li>
-            <li><a class="nav-link text-light" href="welcome.php">Account</a></li>
+            <li class="nav-item">
+            <?php
+              if(isset($_SESSION['username'])){
+                if(isset($_SESSION['role'])){
+                  if($_SESSION['role'] == 'admin'){
+                    ?>
+                      <a class="nav-link active-nav text-light" href="welcome.php"><?php echo $_SESSION['username'] ?></a>
+                    <?php
+                  }
+                }
+
+              } else {
+              ?>
+                <a class="nav-link text-light" href="login.php">Log In</a>
+              <?php
+              }
+            ?>
+              </li>
           </ul>
         </div>
       </div>
@@ -126,7 +143,7 @@
                 <img src="../assets/WBLogo.png" alt=""><br>
               </div>
               <div class="weight-50 content-center">
-                <h2 style="text-transform: capitalize">Welcome, <?php echo $_SESSION['username'] ?></h2>
+                <h2>Welcome, <?php echo $_SESSION['username'] ?></h2>
                 <a class="h3" href="logout.php" style="text-decoration: none">Log Out</a>
               </div>
             </div>
