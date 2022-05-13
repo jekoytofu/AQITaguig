@@ -138,26 +138,7 @@
               <a class="nav-link text-light" href="about_us.php">About Us</a>
             </li>
             <li class="nav-item">
-            <?php
-              if(isset($_SESSION['username'])){
-                if(isset($_SESSION['role'])){
-                  if($_SESSION['role'] == 'admin'){
-                    ?>
-                      <a class="nav-link text-light" href="admin/welcome.php"><?php echo $_SESSION['username'] ?></a>
-                    <?php
-                  } else {
-                    ?>
-                      <a class="nav-link text-light" href="welcome.php"><?php echo $_SESSION['username'] ?></a>
-                    <?php
-                  }
-                }
-
-              } else {
-              ?>
-                <a class="nav-link text-light" href="login.php">Log In</a>
-              <?php
-              }
-            ?>
+              <a class="nav-link text-light" href="welcome.php">Account</a>
               </li>
           </ul>
         </div>

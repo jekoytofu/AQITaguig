@@ -157,24 +157,7 @@ require_once("../include/config.php"); ?>
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
             <li><a class="nav-link active-nav text-light" href="dashboard.php">Dashboard</a></li>
-            <li class="nav-item">
-            <?php
-              if(isset($_SESSION['username'])){
-                if(isset($_SESSION['role'])){
-                  if($_SESSION['role'] == 'admin'){
-                    ?>
-                      <a class="nav-link text-light" href="welcome.php"><?php echo $_SESSION['username'] ?></a>
-                    <?php
-                  }
-                }
-
-              } else {
-              ?>
-                <a class="nav-link text-light" href="login.php">Log In</a>
-              <?php
-              }
-            ?>
-              </li>
+            <li><a class="nav-link text-light" href="welcome.php">Account</a></li>
           </ul>
         </div>
       </div>
