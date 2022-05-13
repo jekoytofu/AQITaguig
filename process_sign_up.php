@@ -27,7 +27,7 @@
     $_SESSION['sign-up-error'] = "Username already Exists";
   }
 
-  header("Location: login.php");
+  header("Location: index.php");
 
 
 

@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/mediclock.css">
+<link rel="stylesheet" href="css/aqi.css">
 <link rel="stylesheet" href="css/all.css">
 <link rel="stylesheet" href="css/venobox.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/default.css">
