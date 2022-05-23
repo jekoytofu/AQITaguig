@@ -22,13 +22,11 @@
     $insertUser = "INSERT INTO users (username, email, password, firstName, middleInitial, lastName, role, sectionID, contactNo, address, age, gender, civilStatus) VALUES ('$username', '$email', '$password', '$fname', '$middleInitial', '$lname', 'user', '$sectionID', '$contactNo', '$address', '$age', '$gender', '$civilStatus')";
     $result = mysqli_query($conn, $insertUser);
     $_SESSION['sign-up-error'] = "Successfully created an account";
-
+    $_SESSION['username'] = $user->username;
+    $_SESSION['role'] = 'user';
   } else {
     $_SESSION['sign-up-error'] = "Username already Exists";
   }
-
   header("Location: index.php");
-
-
 
 ?>

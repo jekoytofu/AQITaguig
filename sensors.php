@@ -18,142 +18,14 @@
 <html lang="en" dir="ltr">
   <head>
     <?php require_once("include/header.php") ?>
+    <?php require_once("include/graph.css") ?>
     <?php if(!isset($_SESSION['username'])){header('Location: login.php');} ?>
+    <title>Sensors</title>
     <meta charset="utf-8">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Day', 'H&T', 'CO', 'CO2'],
-          ['April 11', 1000, 400, 200],
-          ['April 12', 1170, 460, 250],
-          ['April 13', 660, 1120, 300],
-          ['April 14', 1030, 540, 350]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'Sensor Detection',
-            subtitle: 'Heat, CO, and CO2: April 11-14',
-          }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-
-    <script type="text/javascript">
-
-
-    google.charts.load('current', {'packages':['gauge']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['Label', 'Value'],
-        ['H&T', 80],
-        ['CO', 55],
-        ['CO2', 68]
-      ]);
-
-      var options = {
-        width: 600, height: 320,
-        greenFrom: 0, greenTo: 33.3,
-        yellowFrom: 33.4 , yellowTo: 66.5,
-        redFrom: 66.6, redTo: 100,
-        minorTicks: 5
-      };
-
-      var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-
-      setInterval(function() {
-        data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-        chart.draw(data, options);
-      }, 13000);
-      setInterval(function() {
-        data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-        chart.draw(data, options);
-      }, 5000);
-      setInterval(function() {
-        data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
-        chart.draw(data, options);
-      }, 26000);
-    }
-    </script>
-
-   <script type="text/javascript">
-      google.charts.load('current', {'packages':['gauge']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Label', 'Value'],
-          ['H&T', 80],
-          ['CO', 55],
-          ['CO2', 68]
-        ]);
-
-        var options = {
-          width: 600, height: 320,
-          greenFrom: 0, greenTo: 33.3,
-          yellowFrom: 33.4 , yellowTo: 66.5,
-          redFrom: 66.6, redTo: 100,
-          minorTicks: 5
-        };
-
-        var chart = new google.visualization.Gauge(document.getElementById('chart_sensor'));
-
-        chart.draw(data, options);
-
-        setInterval(function() {
-          data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-          chart.draw(data, options);
-        }, 13000);
-        setInterval(function() {
-          data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-          chart.draw(data, options);
-        }, 5000);
-        setInterval(function() {
-          data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
-          chart.draw(data, options);
-        }, 26000);
-      }
-    </script>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/aqi.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style media="screen">
           .block-weighted {
             display: -webkit-box;
@@ -260,29 +132,47 @@
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
             <li><a class="nav-link text-light" href="index.php">Home</a></li>
-            <li><a class="nav-link active-nav text-light" href="sensors.php">Sensors</a></li>
+            <li><a class="nav-link active-nav text-light" href="sensors.php">Dashboard</a></li>
             <li><a class="nav-link text-light" href="about_us.php">About Us</a></li>
             <li><a class="nav-link text-light" href="welcome.php">Account</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <section style="padding:5rem; min-height: 70vh; background-color: #ffffff;" class="content-center">
-      <div class="graphBox">
-        <div class="box">
-         <div id="columnchart_material" style="width: 500px; height: 500px;"></div>
-       </div>
-        <div class="box">
-          <div id="chart_sensor" style="width: 500px; height: 250px;"></div>
-        </div>
+    <section style="padding:3rem; min-height: 70vh; background-color: #ffffff;">
+      <div class="card-sn">
+      <h1 class="title h1 font-weight-bold" color="#38424d">Air Quality in Brgy. Western Bicutan</h1>
+      <p class="h4">
+        <br>Brgy. Western Bicutan Air Quality Index <strong>(BWBAQI)</strong> and Ozone <strong>(O3)</strong> and Carbon Monoxide <strong>(CO)</strong> air pollution in Western Bicutan
+      </p>
     </div>
-         <div class="graphBox">
-           <div class="box">
-             <div id="chart_div" style="width: 500px; height: 250px;"></div>
-         </div>
-           <div class="box">
+    <div class="aqi-index">
 
+    </div>
+      <div class="graphBox">
+        <div class="box b1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <div id="chart_sensor" style="width: 300px; height: 100px;"></div>
+       </div>
+        <div class="box b2">
+          <div class="aqi-index">
+            <div class="aqi-box">
+              <p class="aqi-value_unit">BWB AQI </p>
+              <p class="aqi-value_value">20 </p>
+            </div>
+            <p class="aqi-status">
+              <span class="aqi-status_label">Live Aqi Index</span>
+              <br>
+              <span class="aqi-status_text">Good</span>
+            </p>
           </div>
+       </div>
+       <div class="box">
+         <canvas id="myChart"></canvas>
       </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="my_chart.js"></script>
+    </section>
   </body>
 </html>

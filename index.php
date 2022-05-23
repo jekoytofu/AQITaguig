@@ -118,6 +118,7 @@
     </style>
   </head>
   <body>
+      <div class="navbar-area">
       <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #ed6b6d;">
         <div style="flex-basis: 50%;">
           <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
@@ -144,6 +145,7 @@
         </div>
       </div>
     </nav>
+  </div>
     <section>
       <img src="assets/Barangay.jpg" alt="homepage" style="width:100%;">
     </section>
