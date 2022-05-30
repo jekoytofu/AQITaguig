@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli("localhost", "root", "", "mediclock_db") or die(mysqli_error($mysqli));
+$mysqli = new mysqli("localhost", "root", "", "aqi_db") or die(mysqli_error($mysqli));
 
 if(isset($_GET['delete'])){
   $id = $_GET['delete'];

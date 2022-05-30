@@ -155,7 +155,7 @@ require_once("../include/config.php"); ?>
               </ul>
                 </div>
                 <?php
-            			$conn = new mysqli("localhost", "root", "", "mediclock_db") or die(mysqli_error());
+            			$conn = new mysqli("localhost", "root", "", "aqi_db") or die(mysqli_error());
             			$query = $conn->query("SELECT * FROM `users` WHERE `id` = '$_GET[id]'") or die(mysqli_error());
             			$fetch = $query->fetch_array();
             			$username = $fetch['username'];

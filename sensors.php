@@ -121,9 +121,9 @@
       </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #ed6b6d;">
+    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #0000ff;">
       <div style="flex-basis: 50%;">
-        <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
+        <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;CV Air Quality</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -141,9 +141,9 @@
     </nav>
     <section style="padding:3rem; min-height: 70vh; background-color: #ffffff;">
       <div class="card-sn">
-      <h1 class="title h1 font-weight-bold" color="#38424d">Air Quality in Brgy. Western Bicutan</h1>
+      <h1 class="title h1 font-weight-bold" color="#38424d">Air Quality in Centennial Village</h1>
       <p class="h4">
-        <br>Brgy. Western Bicutan Air Quality Index <strong>(BWBAQI)</strong> and Ozone <strong>(O3)</strong> and Carbon Monoxide <strong>(CO)</strong> air pollution in Western Bicutan
+        <br>Centennial Village Air Quality Index <strong>(CVAQI)</strong> and Ozone <strong>(O3)</strong> and Carbon Monoxide <strong>(CO)</strong> air pollution in Centennial Taguig
       </p>
     </div>
     <div class="aqi-index">
@@ -174,5 +174,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="my_chart.js"></script>
     </section>
+    <?php include("include/footer.php") ?>
   </body>
 </html>
