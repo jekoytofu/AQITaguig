@@ -3,7 +3,7 @@ class DBController {
 	private $host = "localhost";
 	private $user = "root";
 	private $password = "";
-	private $database = "mediclock_db";
+	private $database = "aqi_db";
 
 	private static $conn;
 

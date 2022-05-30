@@ -103,9 +103,9 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #ed6b6d;">
+    <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #0000ff;">
       <div style="flex-basis: 50%;">
-        <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
+        <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;CV Air Quality</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -189,6 +189,8 @@
         </div>
       </div>
     </section>
+    <br><br><br><br><br>
     <?php include("include/design.php") ?>
+    <?php include("include/footer.php") ?>
   </body>
 </html>

@@ -16,7 +16,7 @@ require_once("../include/config.php");
 		$address = $_POST["address"];
 		$sectionID = $_POST["sectionID"];
 
-		$conn = new mysqli("localhost", "root", "", "mediclock_db") or die(mysqli_error());
+		$conn = new mysqli("localhost", "root", "", "aqi_db") or die(mysqli_error());
 		$conn->query("UPDATE `users` SET `username` = '$username', `password` = '$password', `firstName` = '$firstName', `middleInitial` = '$middleInitial', `lastName` = '$lastName',
 			`age` = '$age', `gender` = '$gender', `civilStatus` = '$civilStatus', `email` = '$email', `contactNo` = '$contactNo', `address` = 'address', `sectionID` = '$sectionID'
 			WHERE `id` = $id") or die(mysqli_error($conn));

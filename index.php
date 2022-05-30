@@ -119,9 +119,9 @@
   </head>
   <body>
       <div class="navbar-area">
-      <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #ed6b6d;">
+      <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #0000ff;">
         <div style="flex-basis: 50%;">
-          <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;BWB Air Quality</a>
+          <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;CV Air Quality</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -147,13 +147,13 @@
     </nav>
   </div>
     <section>
-      <img src="assets/Barangay.jpg" alt="homepage" style="width:100%;">
+      <img src="assets/centen.jpg" alt="homepage" style="width:100%;">
     </section>
     <section style="padding:2rem; padding-left:3rem; padding-right:3rem;" class="container">
       <div class="block-weighted" style="padding: 2rem; padding-bottom: 0%">
         <div class="weight-50 dual-content-left" "col-lg-6">
           <div class="card-br">
-          <h1 class="title h1 font-weight-bold">Welcome to Brgy. Western Bicutan Air Quality Monitor</h1>
+          <h1 class="title h1 font-weight-bold">Welcome to Centennial Village Air Quality Monitor</h1>
           <p class="h4">
             <br>Air pollution remains a problem in the Philippines. To lessen the risks of polluted air, monitoring and reducing air pollution
             individually would be a helpful solution. Barangay Western Bicutan is surrounded by big factories with big highways and motor emissions.
@@ -173,39 +173,42 @@
               <div class="grid-item"><b>Colors</b></div>
               <div class="grid-item"><b>Health Recommendation</b></div>
 
-              <div class="grid-item-green">Good 0-50</div>
-              <div class="grid-item-green">Green</div>
+              <div class="grid-item-green"><strong>Good</strong> <br>(G, 0-10)</div>
+              <div class="grid-item-green"><strong>Green</strong></div>
               <div class="grid-item-blue">Air Quality is satisfactory and poses little or no risk.</div>
 
-              <div class="grid-item-yellow">Moderate 51-100</div>
-              <div class="grid-item-yellow">Yellow</div>
+              <div class="grid-item-yellow"><strong>Fair</strong> <br>(F, 11-20)</div>
+              <div class="grid-item-yellow"><strong>Yellow</strong></div>
               <div class="grid-item-blue">Sensitive individuals should avoid outdoor activity
                             as they may experience respiratory symptoms.</div>
 
-              <div class="grid-item-orange">Unhealthy 151-200</div>
-              <div class="grid-item-orange">Orange</div>
+              <div class="grid-item-orange"><strong>Unhealthy for Sensitive Groups</strong> <br>(USG, 21-30)</div>
+              <div class="grid-item-orange"><strong>Orange</strong></div>
               <div class="grid-item-blue">General public and sensitive individuals in particular are at risk
                             to experience irritation and respiratory problem.</div>
 
-              <div class="grid-item-red">Unhealthy 151-200</div>
-              <div class="grid-item-red">Red</div>
+              <div class="grid-item-red"><strong>Very Unhealthy</strong><br>(VU, 31-40)</div>
+              <div class="grid-item-red"><strong>Red</strong></div>
               <div class="grid-item-blue">Increased likehood of adverse effects and aggravation
                             to the heart and lungs among general public.</div>
 
-              <div class="grid-item-red-orange">Very Unhealthy 201-300</div>
-              <div class="grid-item-red-orange">Red Orange</div>
+              <div class="grid-item-red-orange"><strong>Acutely Unhealthy</strong><br>(AU, 41-50)</div>
+              <div class="grid-item-red-orange"><strong>Red Orange</strong></div>
               <div class="grid-item-blue">General Public will be noticeably affected. Sensitive groups should
                             restrict outdoor activities.</div>
 
-              <div class="grid-item-maroon">Hazardous 300+</div>
-              <div class="grid-item-maroon">Maroon</div>
+              <div class="grid-item-maroon"><strong>Emergency</strong><br>(E, 51-70)</div>
+              <div class="grid-item-maroon"><strong>Maroon</strong></div>
               <div class="grid-item-blue">General public at high risk of experiencing strong irritation and adverse
                             health effects. Should avoid outdoor activities.</div>
                           </div>
             </div>
             </section>
 
+            <br><br><br>
+
     </section>
     <?php include("include/design.php") ?>
+    <?php include("include/footer.php") ?>
   </body>
 </html>

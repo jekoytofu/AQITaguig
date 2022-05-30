@@ -3,7 +3,7 @@
     $mysqlUserName      = "root";
     $mysqlPassword      = "";
     $mysqlHostName      = "localhost";
-    $DbName             = "mediclock_db";
+    $DbName             = "aqi_db";
     $backup_name        = "DbBackup.sql";
     $tables             = array("feedbacks", "sections", "users");
 
