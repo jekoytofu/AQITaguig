@@ -114,7 +114,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #0000ff;">
       <div style="flex-basis: 50%;">
-        <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/WBLogo.png" alt="logo">&nbsp;CV Air Quality</a>
+        <a class="navbar-brand text-light" href="index.php" style="font-weight:600; font-size:40px"><img width="70px" src="assets/CVAQILOGO.png" alt="logo">&nbsp;CV Air Quality</a>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -143,8 +143,8 @@
           <div class="card">
             <div class="block-weighted">
               <div class="weight-50 content-center">
-                <label class="h2" style="text-align:center;">BRGY.WESTERN <br>BICUTAN AIR QUALITY</label>
-                <img src="assets/WBLogo.png" alt=""><br>
+                <label class="h2" style="text-align:center;">Centennial Village <br> AIR QUALITY</label>
+                <img src="assets/CVAQILOGO.png" alt=""><br>
                 <a class="link" href="sign_up.php">Create an account</a>
               </div>
               <div class="weight-50">
