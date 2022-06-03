@@ -31,7 +31,7 @@
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
-            display: flex;adadasd
+            display: flex;
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
             -webkit-flex-direction: row;
