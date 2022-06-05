@@ -185,23 +185,24 @@
               <div class="grid-item-orange"><strong>Unhealthy for Sensitive Groups</strong> <br>(USG, 21-30)</div>
               <div class="grid-item-orange"><strong>Orange</strong></div>
               <div class="grid-item-blue">General public and sensitive individuals in particular are at risk
-                            to experience irritation and respiratory problem.</div>
+                            to experience irritation and respiratory problem such as asthma, they should limit outdoor exertion.</div>
 
               <div class="grid-item-red"><strong>Very Unhealthy</strong><br>(VU, 31-40)</div>
               <div class="grid-item-red"><strong>Red</strong></div>
               <div class="grid-item-blue">Increased likehood of adverse effects and aggravation
-                            to the heart and lungs among general public.</div>
+                            to the heart and lungs among general public. Pedestrian should avoid heavy traffic areas.</div>
 
               <div class="grid-item-red-orange"><strong>Acutely Unhealthy</strong><br>(AU, 41-50)</div>
               <div class="grid-item-red-orange"><strong>Red Orange</strong></div>
-              <div class="grid-item-blue">General Public will be noticeably affected. Sensitive groups should
-                            restrict outdoor activities.</div>
+              <div class="grid-item-blue">General Public will be noticeably affected. Industrial activities may be curtailed.
+                            Motor vehicle use may be restricted. Unnecessary trips should be postponed.</div>
 
               <div class="grid-item-maroon"><strong>Emergency</strong><br>(E, 51-70)</div>
               <div class="grid-item-maroon"><strong>Maroon</strong></div>
               <div class="grid-item-blue">General public at high risk of experiencing strong irritation and adverse
-                            health effects. Should avoid outdoor activities.</div>
-                          </div>
+                            health effects. Everyone should avoid exertion and sources of CO, such as heavy traffic, and should stay indoors
+                          and rest as much as possible.</div>
+            </div>
             </div>
             </section>
 
