@@ -122,15 +122,6 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-basis: 50%; justify-content: flex-end;">
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-              <a class="nav-link text-light" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="sensors.php">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="about_us.php">About Us</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link active-nav text-light" href="login.php">Login</a>
             </li>

@@ -1,4 +1,5 @@
-<?php require_once('include/session.php') ?>
+<?php session_start();
+require_once("include/config.php"); ?>
 
 <?php
   if(isset($_SESSION['username'])){
@@ -17,6 +18,7 @@
   <head>
     <?php require_once("include/header.php") ?>
     <meta charset="utf-8">
+    <title>Accounts</title>
     <style media="screen">
           .block-weighted {
             display: -webkit-box;
@@ -107,10 +109,9 @@
               -ms-grid-columns: 1fr;
               grid-template-columns: 1fr;
             }
-          }
 
+          }
       </style>
-    <title>Welcome</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #0000ff;">
@@ -139,26 +140,75 @@
         </div>
       </div>
     </nav>
-    <section style="padding:2rem; height: 70vh; background-color: #FFFFFF;" class="content-center">
-      <div class="container">
+    <?php
+      $getAllAccounts = "SELECT * FROM users ORDER BY role ASC";
+
+      if(isset($_POST["role"])){
+        $getAllAccounts = $getAllAccounts." WHERE role = '".$_POST["role"] ."'";
+      }
+      $fetchUsers = mysqli_query($conn, $getAllAccounts);
+    ?>
+    <section style="padding-top:2rem; padding-bottom:2rem; min-height: 70vh; background-color: #ffffff;" class="content-center">
+        <div class="weight-50">
           <div class="card">
-            <div class="block-weighted">
-              <div class="weight-50 content-center">
-                <img src="assets/CVAQILOGO.png" alt=""><br>
-              </div>
-              <div class="weight-50 content-center">
-                <h2 style="text-transform: capitalize">Welcome, <?php echo $_SESSION['username'] ?></h2>
-                <a class="h3" href="logout.php" style="text-decoration: none">Log Out</a>
-              </div>
+            <div class="d-flex">
+                <button class="btn btn-outline-info" type="button" name="button" style="border-radius:50px; font-size: 20px;"><a href="add_user.php" class="text-dark" style="text-decoration: none"><i class="fas fa-user-circle"></i> Add Account</button>
+              </a>
+            </div>
+            <table class="table table-striped table-hover" id="userTable">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Operations</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  while($user = mysqli_fetch_object($fetchUsers)){
+                    $getAllSections = "SELECT * FROM sections";
+                    $fetchSections= mysqli_query($conn, $getAllSections);
+                    ?>
+                    <tr>
+                      <td><?php echo $user->username?></td>
+                      <td nowrap="nowrap">
+                        <a href ="edit_account.php?id=<?php echo $user->id?>&lastName=<?php echo $user->lastName?>" class="btn btn-primary btn-sm"><i class="fas fa-user-edit"></i> Update</a>
+                        <a id="delete_account" href = "remove.php?id=<?php echo $user->id?>&lastName=<?php echo $user->lastName?>" class="btn btn-danger btn-sm"><i class="fas fa-eraser"></i> Remove</a>
+                      </td>
+                    </tr>
+                    <?php
+                  }
+                  $conn->close();
+                ?>
+              </table>
+              </tbody>
             </div>
           </div>
-      </div>
-      <div class="d-flex justify-content-center">
-          <button class="btn btn-light text-primary" type="button" name="button" style="border-radius:50px; background-color: #f5f5f5; font-size: 25px; "><a href="accounts.php" class="text-dark" style="text-decoration: none"><i class="fa fa-database"></i> Accounts</button>
-        </a>
+        </div>
       </div>
     </section>
     <br><br><br><br><br>
+  <?php include("script.php"); ?>
+  <script type = "text/javascript">
+      $(document).ready(function() {
+          function disableBack() { window.history.forward() }
+
+          window.onload = disableBack();
+          window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+
+          $('#delete_account').click(function(event) {
+            event.preventDefault();
+            var delete_func = confirm("Are you sure you want to delete this record?")
+            if(delete_func){
+              window.location = $(this).attr("href");
+            }
+          })
+      });
+    </script>
     <?php include("include/footer.php") ?>
+    <script>
+      $(document).ready(funtion(){
+        $('#userTable').DataTable();
+      });
+    </script>
   </body>
 </html>

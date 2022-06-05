@@ -1,5 +1,5 @@
 <?php
-require_once("../include/config.php");
+require_once("include/config.php");
 
 	if(ISSET($_POST['edit_account'])){
 		$id = $_POST['userId'];
