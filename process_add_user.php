@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require_once("../include/config.php");
+  require_once("include/config.php");
 
   $fname = $_POST["fName"];
   $middleInitial = $_POST["middleInitial"];

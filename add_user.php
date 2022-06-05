@@ -1,4 +1,5 @@
-<?php require_once('include/session.php') ?>
+<?php session_start();
+require_once("include/config.php"); ?>
 
 <?php
   if(isset($_SESSION['username'])){
@@ -17,6 +18,7 @@
   <head>
     <?php require_once("include/header.php") ?>
     <meta charset="utf-8">
+    <title>Accounts</title>
     <style media="screen">
           .block-weighted {
             display: -webkit-box;
@@ -110,7 +112,6 @@
           }
 
       </style>
-    <title>Welcome</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color: #0000ff;">
@@ -139,26 +140,44 @@
         </div>
       </div>
     </nav>
-    <section style="padding:2rem; height: 70vh; background-color: #FFFFFF;" class="content-center">
+    <section style="padding:2rem; min-height: 70vh; background-color: #ffffff;" class="content-center">
       <div class="container">
+        <div class="weight-50">
           <div class="card">
-            <div class="block-weighted">
-              <div class="weight-50 content-center">
-                <img src="assets/CVAQILOGO.png" alt=""><br>
-              </div>
-              <div class="weight-50 content-center">
-                <h2 style="text-transform: capitalize">Welcome, <?php echo $_SESSION['username'] ?></h2>
-                <a class="h3" href="logout.php" style="text-decoration: none">Log Out</a>
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="add_admin.php">Admin</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" class="link-info" style="color: #8c8c89;" href="accounts.php">Accounts</a>
+                </li>
+              </ul>
+                </div>
+              <div class="card-body">
+                <label class="h2">Add Admin</label>
+                <form action="process_add_user.php" method="post">
+                  <div class="form-group">
+                    <label for="username">Username</label><br>
+                    <input class="form-control" type="text" name="username" id="username">
+                  </div><br>
+                  <div class="form-group">
+                    <label for="password">Password</label><br>
+                    <input class="form-control" type="password" name="password" id="password">
+                  </div><br>
+                  <input class="btn btn-outline-dark" type="submit" name="signUp" value="Sign Up">
+                </form>
               </div>
             </div>
           </div>
-      </div>
-      <div class="d-flex justify-content-center">
-          <button class="btn btn-light text-primary" type="button" name="button" style="border-radius:50px; background-color: #f5f5f5; font-size: 25px; "><a href="accounts.php" class="text-dark" style="text-decoration: none"><i class="fa fa-database"></i> Accounts</button>
-        </a>
-      </div>
+        </div>
     </section>
     <br><br><br><br><br>
     <?php include("include/footer.php") ?>
+    <script>
+      $(document).ready(funtion(){
+        $('#userTable').DataTable();
+      });
+    </script>
   </body>
 </html>
