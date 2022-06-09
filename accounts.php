@@ -128,7 +128,7 @@ require_once("include/config.php"); ?>
               <a class="nav-link text-light" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="sensors.php">Dashboard</a>
+              <a class="nav-link text-light" href="dashboard.php">Dashboard</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="about_us.php">About Us</a>

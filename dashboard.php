@@ -132,7 +132,7 @@
         <div style="display:flex; justify-content:flex-end;">
           <ul class="navbar-nav mr-auto">
             <li><a class="nav-link text-light" href="index.php">Home</a></li>
-            <li><a class="nav-link active-nav text-light" href="sensors.php">Dashboard</a></li>
+            <li><a class="nav-link active-nav text-light" href="dashboard.php">Dashboard</a></li>
             <li><a class="nav-link text-light" href="about_us.php">About Us</a></li>
             <li><a class="nav-link text-light" href="welcome.php">Account</a></li>
           </ul>
@@ -146,30 +146,29 @@
         <br>Centennial Village Air Quality Index <strong>(CVAQI)</strong> and Ozone <strong>(O3)</strong> and Carbon Monoxide <strong>(CO)</strong> air pollution in Centennial Taguig
       </p>
     </div>
-    <div class="aqi-index">
 
-    </div>
-      <div class="graphBox">
-        <div class="box b1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          <div id="chart_sensor" style="width: 300px; height: 100px;"></div>
-       </div>
-        <div class="box b2">
-          <div class="aqi-index">
-            <div class="aqi-box">
-              <p class="aqi-value_unit">BWB AQI </p>
-              <p class="aqi-value_value">20 </p>
+    <div class="header-hero" data-scroll-index="0">
+    <br><br><br>
+    <div class="container">
+        <div class="row align-items-center justify-content-center justify-content-lg-between">
+          <div class="col-lg-6 col-md-10">
+            <div class="header-hero-content">
+              <h1 class="header-title wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.2s"><span>Calculate AirQuality</span> With CV AQI Calculator</h1>
+              <p class="text wow fadeInLeftBig" data-wow-duration="3s" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <br><br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <ul class="d-flex">
+                <li><a href="calcu.php" class="main-btn" data-wow-duration="3s" data-wow-delay="0.8s">Calculate AirQuality Index</a></li>
+              </ul>
             </div>
-            <p class="aqi-status">
-              <span class="aqi-status_label">Live Aqi Index</span>
-              <br>
-              <span class="aqi-status_text">Good</span>
-            </p>
           </div>
-       </div>
-       <div class="box">
-         <canvas id="myChart"></canvas>
-      </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="header-image">
+              <div id="chart_sensor" style="width: 300px; height: 100px;"></div>
+            </div>
+          </div>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="my_chart.js"></script>
